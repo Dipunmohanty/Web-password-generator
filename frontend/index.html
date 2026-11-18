@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Personality Passwords</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <div>
+        <p class="eyebrow">Personal password studio</p>
+        <h1>Personality Passwords</h1>
+      </div>
+      <button id="logoutButton" class="button secondary hidden" type="button">Log out</button>
+    </header>
+
+    <section id="authView" class="card">
+      <div class="tabs">
+        <button class="tab active" data-tab="login">Log in</button>
+        <button class="tab" data-tab="register">Create account</button>
+      </div>
+      <form id="authForm" class="stack">
+        <label>Username<input id="username" name="username" autocomplete="username" required minlength="3"></label>
+        <label>Password<input id="authPassword" name="password" type="password" autocomplete="current-password" required minlength="8"></label>
+        <div id="profileFields" class="hidden">
+          <label>Full name<input id="fullName" name="name" autocomplete="name" maxlength="120"></label>
+          <label>Date of birth<input id="dateOfBirth" name="dateOfBirth" type="date"></label>
+          <label>Place of birth<input id="placeOfBirth" name="placeOfBirth" maxlength="160"></label>
+        </div>
+        <section id="accountQuiz" class="quiz hidden">
+          <h2>Tell us 10 things about you</h2>
+        </section>
+        <button class="button" type="submit">Continue</button>
+      </form>
+      <p id="authMessage" class="message"></p>
+    </section>
+
+    <section id="appView" class="hidden">
+      <nav class="actions">
+        <button id="createButton" class="button" type="button">Create password</button>
+        <button id="viewButton" class="button secondary" type="button">My passwords</button>
+      </nav>
+
+      <section id="quizView" class="card hidden">
+        <div class="card-heading">
+          <p class="eyebrow">Personal survey</p>
+          <h2>Answer 10 questions</h2>
+        </div>
+        <form id="quizForm" class="quiz"></form>
+      </section>
+
+      <section id="listView" class="card hidden">
+        <div class="card-heading">
+          <p class="eyebrow">Saved names</p>
+          <h2>My passwords</h2>
+        </div>
+        <p class="constraints">Password constraints: at least 12 characters, with uppercase, lowercase, digit, and a special character (!@#$%&amp;*).</p>
+        <div id="passwordList"></div>
+      </section>
+    </section>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+# Environment configuration and credentials
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+.netrc
+credentials.json
+secrets.json
+*credentials*.json
+*secrets*.json
+
+# Local databases, dumps, logs, and test outputs
+*.db
+*.sqlite
+*.sqlite3
+*.sql.gz
+*.dump
+*.log
+coverage.xml
+htmlcov/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Go and generated binaries
+frontend/*.exe
+*.exe
+*.test
+/bin/
+/dist/
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
